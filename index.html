@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>MEDP 331 - Class Assignment 3</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <meta name="description" content="Homepage for class assignment 3" />
+        <meta name="author" content="Kristy" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Maven+Pro:wght@500&display=swap" rel="stylesheet">
+    </head>
+    <body>
+
+        <div style="text-align: center;">
+            <p id="myP" style="font-family: 'Maven Pro', sans-serif;">Hi, look at me! :)</p>
+
+            <button type="button" id="increment">Increment</button>
+            <button type="button" id="decrement">Decrement</button>
+            <button type="button" id="red">Red</button>
+            <button type="button" id="green">Green</button>
+            <button type="button" id="blue">Blue</button>
+        </div>
+
+        <style>
+            #increment {
+                background-color: white;
+                color: black;
+                border: 2px solid #000000;
+                font-family: 'Maven Pro', sans-serif;
+            }
+
+            #decrement {
+                background-color: black;
+                color: white;
+                border: 2px solid #000000;
+                font-family: 'Maven Pro', sans-serif;
+            }
+
+            #red {
+                background-color: white;
+                color: black;
+                border: 2px solid #ff0000;
+                font-family: 'Maven Pro', sans-serif;
+            }
+
+            #green {
+                background-color: white;
+                color: black;
+                border: 2px solid #00ff00;
+                font-family: 'Maven Pro', sans-serif;
+            }
+
+            #blue {
+                background-color: white;
+                color: black;
+                border: 2px solid #0000ff;
+                font-family: 'Maven Pro', sans-serif;
+            }
+        </style>
+
+        <script>
+
+            var a;
+            a = 75;
+            var r;
+            r = 0;
+            var b;
+            g = 0;
+            b = 0;
+
+            // Affecting size of text
+            var increment = document.getElementById("increment");
+            var decrement = document.getElementById("decrement");
+
+            // Affecting color of text
+            var red = document.getElementById("red");
+            var green = document.getElementById("green");
+            var blue = document.getElementById("blue");
+
+            document.getElementById("myP").style.fontSize = a+"px";
+
+            increment.addEventListener("click", function(){
+
+                a = a +1;
+                document.getElementById("myP").style.fontSize = a+"px";
+                console.log("Size of text: "+a);
+
+                
+            });
+
+            // Assigned - Decrement text size
+            decrement.addEventListener("click", function(){
+                a = a - 1;
+                document.getElementById("myP").style.fontSize = a+"px";
+                console.log("Size of text: "+a);
+            }); 
+
+            red.addEventListener("click", function(){
+
+                r = r+10;
+                document.getElementById("myP").style.color = "rgb"+"("+r+",0,0)";
+                console.log("Value of r: " + r);
+
+            });
+
+            green.addEventListener("click", function(){
+
+                g = g+10;
+                document.getElementById("myP").style.color = "rgb"+"("+"0,"+g+",0)";
+                console.log("Value of g: " + g);
+            });
+
+            // Assigned - Increment blue color
+            blue.addEventListener("click", function(){
+
+                b = b+10;
+                document.getElementById("myP").style.color = "rgb"+"(0,0,"+b+")";
+                console.log("Value of b: " + b);
+            });
+
+        </script>
+
+    </body>
+</html>
